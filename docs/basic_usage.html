@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Usage &mdash; Metadata Standardizer 2023 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="code" href="modules.html" />
+    <link rel="prev" title="Deployment" href="deployment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Metadata Standardizer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Preface">Preface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Perspective">Perspective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main_string-vs-valid_string">main_string vs valid_string</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Curating-a-User's-Vocabulary">Curating a User’s Vocabulary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Submitting-a-Study">Submitting a Study</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Steps-Always-Taken">Steps Always Taken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Steps-Taken-if-New-Vocabulary">Steps Taken if New Vocabulary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Accessing-Submitted-Studies">Accessing Submitted Studies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metadata Standardizer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Basic Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/basic_usage.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Basic-Usage">
+<h1>Basic Usage<a class="headerlink" href="#Basic-Usage" title="Permalink to this heading"></a></h1>
+<section id="Preface">
+<h2>Preface<a class="headerlink" href="#Preface" title="Permalink to this heading"></a></h2>
+<section id="Perspective">
+<h3>Perspective<a class="headerlink" href="#Perspective" title="Permalink to this heading"></a></h3>
+<p>There are many ways to wield an API. This documentation explains from the perspective of recreating the frontend.</p>
+</section>
+<section id="main_string-vs-valid_string">
+<h3>main_string vs valid_string<a class="headerlink" href="#main_string-vs-valid_string" title="Permalink to this heading"></a></h3>
+<p>a vocabulary term can have multiple ways to refer to it. ‘mus musculus’ can also be called ‘mouse’. So, ‘main_string’ refers to the ‘most official’ way to reference something and ‘valid_string’ is a set of synonyms, which includes the ‘main_string’.</p>
+</section>
+</section>
+<section id="Curating-a-User's-Vocabulary">
+<h2>Curating a User’s Vocabulary<a class="headerlink" href="#Curating-a-User's-Vocabulary" title="Permalink to this heading"></a></h2>
+<p>There are two resources associated with curating a user’s vocabulary. Their ordering depends on the logic of the frontend.</p>
+<p>In our frontend, we try the automatic curation first, which is based on (the n-grams TF-IDF coupled with a nearest neighbors model) AND (property use_count, which measures if that term has been used before. we assume the same terms will be used more often). We do this via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">:4999/predictvocabularytermsresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    “header”:”species”,
+    “written_strings”:[“musk muskulus”,”homo”],
+    “neighbors_to_retrieve”:100
+}
+</pre></div>
+</div>
+<p>The frontend then handles the “validation” (in our frontend we only offer the top match) by the user as well as the actual transforms on the current submitted sample-metadata matrix if they accept the proposal.</p>
+<p>In our frontend, terms whose proposals are not accepted are given the chance to curated using substring matching. We do this via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">:4999/generatesubstringmatchesresource</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;header&quot;:&quot;species&quot;,
+    &quot;substring&quot;:&quot;porcupi&quot;
+}
+</pre></div>
+</div>
+<p>From this, a list of main_strings and valid_strings is generated. It is worth noting that our frontend blocks calls when the number of char is &lt; than 3 for certain categories to prevent slowing. However, for certain categories, it always allows calls. For example, ‘m’ is a valid_string for ‘meter’.</p>
+<p>These are the only tools for curation. The third step on the frontend is just submission of a new term, not matching to old terms</p>
+</section>
+<section id="Submitting-a-Study">
+<h2>Submitting a Study<a class="headerlink" href="#Submitting-a-Study" title="Permalink to this heading"></a></h2>
+<section id="Steps-Always-Taken">
+<h3>Steps Always Taken<a class="headerlink" href="#Steps-Always-Taken" title="Permalink to this heading"></a></h3>
+<p>There are two steps always taken upon completion of the curation process on our frontend. One is the updating of use_count and one is the submission of the study.</p>
+<p>The use_count property is updated via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">:4999/updateusecountresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;header&quot;:&quot;species&quot;,
+    &quot;main_string&quot;:&quot;Bacteria&quot;
+}
+</pre></div>
+</div>
+<p>we update use_count because it is an important aspect of getting the best term. We found that just the cosine of n-grams often led to close-but-not-quite answers. Maybe think of this as a sloppy Bayesian approach?</p>
+<p>We update the main_string because we want to update the core vocabulary term. If you need the main_string and only have the valid_string, you can access the main_string via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/retrievevocabrowsresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;header&quot;:&quot;organ&quot;,
+    &quot;valid_string&quot;:&quot;kidney&quot;
+}
+</pre></div>
+</div>
+<p>it is important to specify the header, because the same valid_string (and main string for that matter?) can appear in multiple instances. For example, DDT is a pesticide as well as a gene.</p>
+<p>Finally, we always submit a completed study to the database. Again, the actual data submitted will come from the frontend which is orchestrating the transformation. Do via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/addstudytodatabase/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;provided_author_name&quot;: &quot;Parker Bremer&quot;,
+    &quot;sample_metadata_sheet_panda&quot;:
+    [
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;Kidney&quot;, &quot;cellLine.0&quot;: &quot;not available&quot;, &quot;cellCount.0&quot;: &quot;not available&quot;, &quot;mass.0&quot;: &quot;5.0&quot;, &quot;massUnit.0&quot;: &quot;milligram&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;control&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;not available&quot;, &quot;drugDoseUnit.0&quot;: &quot;not available&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;},
+        {&quot;species.0&quot;: &quot;Homo sapiens&quot;, &quot;organ.0&quot;: &quot;not available&quot;, &quot;cellLine.0&quot;: &quot;HEK293&quot;, &quot;cellCount.0&quot;: &quot;1000000.0&quot;, &quot;mass.0&quot;: &quot;not available&quot;, &quot;massUnit.0&quot;: &quot;not available&quot;, &quot;drugName.0&quot;: &quot;KERENDIA&quot;, &quot;drugDoseMagnitude.0&quot;: &quot;20.0&quot;, &quot;drugDoseUnit.0&quot;: &quot;milligram&quot;}
+    ]
+}
+</pre></div>
+</div>
+</section>
+<section id="Steps-Taken-if-New-Vocabulary">
+<h3>Steps Taken if New Vocabulary<a class="headerlink" href="#Steps-Taken-if-New-Vocabulary" title="Permalink to this heading"></a></h3>
+<p>If there is new vocabulary, then additiona steps must be taken.</p>
+<p>We must first validate that these terms are legitimate to add (which the frontend actually does before the study is submitted. Do this via</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/validatetermsfortrainingresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;new_vocabulary&quot;:[&quot;Bacteria&quot;,&quot;Azorhizobium&quot;]
+}
+</pre></div>
+</div>
+<p>This will do things like check to make sure that terms are long enough.</p>
+<p>Next, we add terms to the vocabulary. This is a FAST step (unlike training), so we recommend performing it every time. Do it like</p>
+<p>a post request to `<code class="docutils literal notranslate"><span class="pre">4999/addtermstovocabularyresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;header&quot;:&quot;species&quot;,
+    &quot;new_vocabulary&quot;:[&quot;new species 1&quot;,&quot;new species 2&quot;]
+}
+</pre></div>
+</div>
+<p>It is worth noting that, for new terms, the valid_string and main_string will be the same - there is no synonym feature.</p>
+<p>However, training is a SLOW step. Possible approaches include making it a background process that is done periodically (once a day). Being slightly out-of-date on this is OK, because the FAST vocabulary step ensures that upon the next training, the full vocabulary will be there.</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/trainvocabularyresource/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;header&quot;:&quot;species&quot;
+}
+</pre></div>
+</div>
+</section>
+</section>
+<section id="Accessing-Submitted-Studies">
+<h2>Accessing Submitted Studies<a class="headerlink" href="#Accessing-Submitted-Studies" title="Permalink to this heading"></a></h2>
+<p>On our frontend, users are presented with a result Excel file containing the standardized metadata. That is good, but we might also want programmatic access to submitted studies for connection to other data processing.</p>
+<p>We can do this without any knowledge about what the user submitted as long their submission was slightly logical.</p>
+<p>First, we can determine all authors that have ever submitted a study using</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/authorid/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+<p>Then, select the author that makes sense and get all submitted study IDs using</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/studyid/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;author_id&quot;:&quot;parkerbremer&quot;
+}
+</pre></div>
+</div>
+<p>The resulting studyIDs are the ms since the Linux time epoch. So, we can probably just use the largest number as that corresponds to the most recently submitted study. Then, we can get the full transformed samples like</p>
+<p>a post request to <code class="docutils literal notranslate"><span class="pre">4999/samples/</span></code></p>
+<p>With a payload like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
+    &quot;study_id&quot;:&quot;1686247553.2546&quot;
+}
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="deployment.html" class="btn btn-neutral float-left" title="Deployment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Parker Bremer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

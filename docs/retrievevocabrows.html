@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>retrievevocabrows module &mdash; Metadata Standardizer 2023 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="samples module" href="samples.html" />
+    <link rel="prev" title="predictvocabularyterms module" href="predictvocabularyterms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Metadata Standardizer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic Usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="addstudytodatabase.html">addstudytodatabase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addtermstovocab.html">addtermstovocab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorID.html">authorID module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generatesubstringmatches.html">generatesubstringmatches module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="predictvocabularyterms.html">predictvocabularyterms module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">retrievevocabrows module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samples.html">samples module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="studyID.html">studyID module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainvocabulary.html">trainvocabulary module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updateusecount.html">updateusecount module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validatetermsfortraining.html">validatetermsfortraining module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metadata Standardizer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">code</a></li>
+      <li class="breadcrumb-item active">retrievevocabrows module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/retrievevocabrows.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-retrievevocabrows">
+<span id="retrievevocabrows-module"></span><h1>retrievevocabrows module<a class="headerlink" href="#module-retrievevocabrows" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="retrievevocabrows.RetrieveVocabRowsResource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">retrievevocabrows.</span></span><span class="sig-name descname"><span class="pre">RetrieveVocabRowsResource</span></span><a class="headerlink" href="#retrievevocabrows.RetrieveVocabRowsResource" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Resource</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="retrievevocabrows.RetrieveVocabRowsResource.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Collection</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'POST'}</span></em><a class="headerlink" href="#retrievevocabrows.RetrieveVocabRowsResource.methods" title="Permalink to this definition"></a></dt>
+<dd><p>The methods this view is registered for. Uses the same default
+(<code class="docutils literal notranslate"><span class="pre">[&quot;GET&quot;,</span> <span class="pre">&quot;HEAD&quot;,</span> <span class="pre">&quot;OPTIONS&quot;]</span></code>) as <code class="docutils literal notranslate"><span class="pre">route</span></code> and
+<code class="docutils literal notranslate"><span class="pre">add_url_rule</span></code> by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="retrievevocabrows.RetrieveVocabRowsResource.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#retrievevocabrows.RetrieveVocabRowsResource.post" title="Permalink to this definition"></a></dt>
+<dd><p>takes a valid string and a header and allows you to see the complete row</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<em>str</em>) – which vocabulary</p></li>
+<li><p><strong>valid_strings</strong> (<em>list</em>) – a string that exists as a representation of a main_string</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the complete row for that string in that vocabulary</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<dl class="simple">
+<dt>{</dt><dd><p>“header”:”organ”,
+“valid_string”:”kidney”</p>
+</dd>
+</dl>
+<p>}</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="predictvocabularyterms.html" class="btn btn-neutral float-left" title="predictvocabularyterms module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="samples.html" class="btn btn-neutral float-right" title="samples module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Parker Bremer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
